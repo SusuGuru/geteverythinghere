@@ -14,8 +14,9 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/product-details">Products</Link> {/* Will navigate once ProductDetails page exists */}
-          </li>
+  <Link to="/products">Products</Link> {/* Goes to products list page */}
+</li>
+
           <li>
             <Link to="/#about-us">About</Link>
           </li>

@@ -1,19 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import LandingPage from "./pages/LandingPage";
-import StorePage from "./pages/StorePage";
-import ProductDetails from "./pages/ProductDetails";
-import "./styles.css";
+import Home from "./pages/Home";
+import Products from "./pages/Products"; // Your product list page
+import ProductDetails from "./pages/ProductDetails"; // Your product details page
 
 export default function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/store" element={<StorePage />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} /> {/* Products list */}
+        <Route path="/products/:id" element={<ProductDetails />} /> {/* Product details */}
       </Routes>
     </Router>
   );
